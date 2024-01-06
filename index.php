@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="imgs/uchlogo.ico">
-    <title>健行科技大學 - 購物車首頁</title>
+    <title>健行科技大學 - 購物車</title>
     <link href="./vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="./vendor/bootstrap/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/styles.css" rel="stylesheet">
