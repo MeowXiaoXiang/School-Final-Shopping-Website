@@ -1,0 +1,175 @@
+:root {
+    --light-background: #fff;
+    --light-text: #333;
+    --dark-background: #333;
+    --dark-text: #fff;
+    --theme-switcher-hover-light: #FFEE00;
+    --theme-switcher-hover-dark: #008DD2;
+}
+
+.theme.light-mode {
+    background-color: var(--light-background);
+    color: var(--light-text);
+}
+
+.theme.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+.theme.light-mode #theme-switcher:hover {
+    color: var(--theme-switcher-hover-light);
+}
+
+.theme.dark-mode #theme-switcher:hover {
+    color: var(--theme-switcher-hover-dark);
+}
+
+/* 上半部的 CSS 代碼主要為調整顏色變化 */
+/* 下半部的 CSS 代碼主要為調整邊框變化 */
+
+.main-content {
+    padding-top: 70px;
+}
+
+.main-content.navbar-expanded {
+    padding-top: 200px;
+}
+
+@media (min-width: 768px) {
+    .main-content.navbar-expanded {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar.show + .main-content {
+        padding-top: 140px;
+    }
+}
+
+#theme-switcher {
+    border-width: 0;
+    background: transparent;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#navbarTitle {
+    user-select: none;
+}
+
+.cart-link {
+    display: inline-flex;
+    justify-content: flex-start; /* 將內容靠近容器的左邊 */
+    align-items: flex-start; /* 將內容靠近容器的上邊 */
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+}
+
+.cart-quantity {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -3px;
+    top: -3px;
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    line-height: 20px;
+    transform: scale(0.7);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cart-quantity {
+        right: -10px; /* 調整這個值以改變紅圈和數字的水平位置 */
+        top: -5px; /* 調整這個值以改變紅圈和數字的垂直位置 */
+    }
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+#userAvatar, #defaultAvatarIcon, #registerIcon {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+}
+
+#userAvatar {
+    object-fit: cover;
+}
+
+#user-icon-framed {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.avatar-container {
+    width: 160px;  /* 設定寬度 */
+    height: 150px; /* 設定高度 */
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+}
+
+.dropdown-avatar, .avatar-container svg {
+    width: 100%;  /* 設定寬度為容器的100% */
+    height: 100%; /* 設定高度為容器的100% */
+    object-fit: cover; /* 保持圖片的比例 */
+}
+
+.avatar-container #userAvatar, .avatar-container #defaultAvatarIcon, .avatar-container #registerIcon {
+    width: 100%;  /* 設定寬度為容器的100% */
+    height: 100%; /* 設定高度為容器的100% */
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 160px;  /* 設定寬度 */
+    height: 160px; /* 設定高度 */
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+}
+
+.avatar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.avatar-wrapper:hover .avatar-overlay {
+    opacity: 1;
+}
