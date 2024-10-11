@@ -29,9 +29,15 @@ $fileExtension = $fileType === 'image/jpeg' ? 'jpg' : 'png';
 // 建立新的檔案名稱
 $newFileName = $_SESSION['userid'] . '.' . $fileExtension;
 
+// 建立 userAvatar 目錄（如果不存在）
+$targetDir = '../userAvatar';
+if (!is_dir($targetDir)) {
+    mkdir($targetDir, 0777, true);
+}
+
 // 刪除舊的 jpg 和 png 頭像
-$oldJpg = '../userAvatar/' . $_SESSION['userid'] . '.jpg';
-$oldPng = '../userAvatar/' . $_SESSION['userid'] . '.png';
+$oldJpg = $targetDir . '/' . $_SESSION['userid'] . '.jpg';
+$oldPng = $targetDir . '/' . $_SESSION['userid'] . '.png';
 if (file_exists($oldJpg)) {
     unlink($oldJpg);
 }
@@ -40,7 +46,7 @@ if (file_exists($oldPng)) {
 }
 
 // 將檔案移動到目標目錄
-if (move_uploaded_file($file['tmp_name'], '../userAvatar/' . $newFileName)) {
+if (move_uploaded_file($file['tmp_name'], $targetDir . '/' . $newFileName)) {
     http_response_code(200);
 } else {
     http_response_code(500);
