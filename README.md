@@ -71,5 +71,5 @@ CREATE TABLE cart_items (
   ![登入模態框](./markdown_imgs/loginRegisterModal.png)
 - **購物車模態框**
   ![購物車模態框](./markdown_imgs/shopping_cart.png)
-- **用戶資訊框**
+- **用戶資訊框**<br>
   ![用戶資訊框](./markdown_imgs/useravatar.png)
