@@ -60,3 +60,16 @@ CREATE TABLE cart_items (
 - JavaScript：用於處理前端邏輯，如表單驗證和動態渲染。
 - CSS：用於頁面的樣式設計。
 - Bootstrap 5：用於快速設計和自定義響應式網站。
+
+## 網站預覽 (Website Preview)
+
+- **購物車主頁面 (暗色主題)**
+  ![購物車主頁面 (暗色主題)](./markdown_imgs/index_page.png)
+- **白色頁面 (亮色主題)**
+  ![白色頁面 (亮色主題)](./markdown_imgs/index_white_page.png)
+- **登入模態框**
+  ![登入模態框](./markdown_imgs/loginRegisterModal.png)
+- **購物車模態框**
+  ![購物車模態框](./markdown_imgs/shopping_cart.png)
+- **用戶資訊框**
+  ![用戶資訊框](./markdown_imgs/useravatar.png)
